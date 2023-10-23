@@ -1,0 +1,35 @@
+
+[project]
+name = ""
+version = ""
+description = ""
+authors = [{ name = "dudubarbaro", email = "dudubarbaro" }]
+dependencies = [
+    "django>=4.2.4",
+    "djangorestframework>=3.14.0",
+    "setuptools>=68.0.0",
+    "drf-spectacular>=0.26.4",
+    "python-magic>=0.4.27",
+    "Pillow>=10.0.0",
+    "django-extensions>=3.2.3",
+    "pydotplus>=2.0.2",
+]
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=23.7.0",
+    "isort>=5.12.0",
+]
+[tool.pdm.scripts]
+dev = "python manage.py runserver"
+runserver = "python manage.py runserver"
+createsuperuser = "python manage.py createsuperuser"
+migrate = "python manage.py migrate"
+makemigrations = "python manage.py makemigrations"
+shell = "python manage.py shell"
+test = "python manage.py test"
+startapp = "python manage.py startapp {args}"
+loaddata = "python manage.py loaddata {args}"
+dumpdata = "python manage.py dumpdata {args}"
